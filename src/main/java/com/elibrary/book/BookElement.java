@@ -1,6 +1,9 @@
 package com.elibrary.book;
 
-public class BookElement extends LibraryElement{
+import java.io.Serializable;
+import java.util.Objects;
+
+public class BookElement extends LibraryElement implements Serializable, Cloneable {
 
     private String author;
     private String synopsis;
@@ -9,10 +12,20 @@ public class BookElement extends LibraryElement{
 
     public BookElement() {
         super();
+        this.author = "";
+        this.synopsis = "";
+        this.partOfSeries = false;
     }
 
-    public BookElement(String author, String synopsis, boolean partOfSeries) {
-        super();
+    public BookElement(BookElement element) {
+        this.setTitle(element.getTitle());
+        this.author = element.getAuthor();
+        this.synopsis = element.getSynopsis();
+        this.setPartOfSeries(element.isPartOfSeries());
+    }
+
+    public BookElement(String author, String title, String synopsis, boolean partOfSeries) {
+        super(title);
         this.author = author;
         this.synopsis = synopsis;
         this.partOfSeries = partOfSeries;
@@ -39,6 +52,33 @@ public class BookElement extends LibraryElement{
     }
 
     public void setPartOfSeries(boolean partOfSeries) {
-        partOfSeries = partOfSeries;
+        this.partOfSeries = partOfSeries;
+    }
+
+    @Override
+    public String toString() {
+        if(!author.equals("") && !getTitle().equals("") && !synopsis.equals("")) {
+            return author + ", " + getTitle() + "\n" + synopsis;
+        } else {
+            return "Brak danych książki.";
+        }
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return (Object) new BookElement(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookElement that = (BookElement) o;
+        return partOfSeries == that.partOfSeries && Objects.equals(author, that.author) && Objects.equals(synopsis, that.synopsis);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author, synopsis, partOfSeries);
     }
 }
