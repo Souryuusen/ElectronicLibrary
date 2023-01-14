@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/states/UserRegisterResults.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/states/UserRoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/AbstractUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/ApplicationUser.java" afterDir="false" />
+    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-14&#10;- Added AbstractUser&#10;- Created UserRoles and UserRegisterResults enums&#10;- Added ApplicationUser (need further work)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/elibrary/users/ApplicationUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/book/BookElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/BookElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/book/LibraryElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/LibraryElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/elibrary/book/BookElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/elibrary/entities/BookElementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/states/UserRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/states/UserRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/AbstractUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/AbstractUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/ApplicationUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +89,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.elibrary.entities.data" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.BookElementTest">
     <configuration name="All in ElectronicLibrary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElectronicLibrary" />
@@ -169,7 +170,7 @@
       <updated>1673351488505</updated>
       <workItem from="1673374689943" duration="4008000" />
       <workItem from="1673633107768" duration="817000" />
-      <workItem from="1673681754207" duration="1874000" />
+      <workItem from="1673681754207" duration="2996000" />
     </task>
     <task id="LOCAL-00001" summary="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class">
       <created>1673633241741</created>
@@ -178,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673633241741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2023-01-14&#10;- Added AbstractUser&#10;- Created UserRoles and UserRegisterResults enums&#10;- Added ApplicationUser (need further work)">
+      <created>1673688334837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673688334837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class" />
+    <MESSAGE value="2023-01-14&#10;- Added AbstractUser&#10;- Created UserRoles and UserRegisterResults enums&#10;- Added ApplicationUser (need further work)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-01-14&#10;- Added AbstractUser&#10;- Created UserRoles and UserRegisterResults enums&#10;- Added ApplicationUser (need further work)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
