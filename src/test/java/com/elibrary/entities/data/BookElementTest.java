@@ -1,5 +1,6 @@
-package com.elibrary.book;
+package com.elibrary.entities.data;
 
+import com.elibrary.entities.data.BookElement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

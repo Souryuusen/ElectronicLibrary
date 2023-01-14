@@ -1,4 +1,4 @@
-package com.elibrary.book;
+package com.elibrary.entities.data;
 
 import java.io.Serializable;
 import java.util.Objects;
