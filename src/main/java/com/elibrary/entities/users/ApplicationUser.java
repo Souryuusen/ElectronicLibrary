@@ -1,5 +1,7 @@
 package com.elibrary.entities.users;
 
+import com.elibrary.entities.states.UserRoles;
+
 import java.time.LocalDateTime;
 
 public class ApplicationUser extends AbstractUser {
@@ -24,6 +26,13 @@ public class ApplicationUser extends AbstractUser {
         this.registrationDate = null;
     }
 
+    public ApplicationUser(String username, String passwordHash, long userID, UserRoles userRoles,
+                           long collectedElementsCount, LocalDateTime registrationDate) {
+        super(username, passwordHash, userID, userRoles, false);
+        this.collectedElementsCount = collectedElementsCount;
+        this.registrationDate = LocalDateTime.of(registrationDate.toLocalDate(), registrationDate.toLocalTime());
+    }
+
     public void setRegistrationDate(LocalDateTime registrationDate) {
         this.registrationDate = LocalDateTime.of(registrationDate.toLocalDate(), registrationDate.toLocalTime());
     }
@@ -43,7 +52,7 @@ public class ApplicationUser extends AbstractUser {
 
     // TODO: Create verifyUser Procedure After Creating DAO Classes
     @Override
-    String verifyUser(String username, String passwordHash) {
+    public String verifyUser(String username, String passwordHash) {
         return null;
     }
 }
