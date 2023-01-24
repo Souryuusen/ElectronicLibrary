@@ -65,7 +65,7 @@ public class BookElement extends LibraryElement implements Serializable, Cloneab
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return (Object) new BookElement(this);
     }
 
