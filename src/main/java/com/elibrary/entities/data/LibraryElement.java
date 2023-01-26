@@ -1,8 +1,10 @@
 package com.elibrary.entities.data;
 
+import com.google.common.base.Objects;
+
 import java.io.Serializable;
 
-public class LibraryElement extends AbstractElement implements Serializable, Cloneable {
+public class LibraryElement extends AbstractElement implements Serializable{
 
     private long contentID;
     private long creatorID;
@@ -16,6 +18,14 @@ public class LibraryElement extends AbstractElement implements Serializable, Clo
         this.contentRestricted = false;
         this.contentID = 0;
         this.creatorID = 0;
+    }
+
+    public LibraryElement(String title, long creatorID, long contentID, boolean contentPending, boolean contentRestricted) {
+        setTitle(title);
+        this.creatorID = creatorID;
+        this.contentID = contentID;
+        this.contentPending = contentPending;
+        this.contentRestricted = contentRestricted;
     }
 
     public LibraryElement(LibraryElement element) {
@@ -69,7 +79,15 @@ public class LibraryElement extends AbstractElement implements Serializable, Clo
 
     @Override
     public String convertToXML() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        sb.append("<LibraryElement>\n\t")
+                .append("<Title>\t").append(getTitle()).append("\t</Title>\n\t")
+                .append("<Content-ID>\t").append(getContentID()).append("\t</Content-ID>\n\t")
+                .append("<Creator>\t").append(getCreatorID()).append("\t</Creator>\n\t")
+                .append("<Pending>\t").append(isContentPending()).append("\t</Pending>\n\t")
+                .append("<Restricted>\t").append(isContentRestricted()).append("\t</Restricted>\n")
+                .append("</LibraryElement>");
+        return sb.toString();
     }
 
     @Override
@@ -78,7 +96,35 @@ public class LibraryElement extends AbstractElement implements Serializable, Clo
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return (Object) new LibraryElement(this);
+    public boolean equals(Object obj) {
+        if(obj != null && obj instanceof LibraryElement) {
+            if(getTitle().equalsIgnoreCase(((LibraryElement) obj).getTitle()) && contentID == ((LibraryElement) obj).getContentID()
+                    && creatorID == ((LibraryElement) obj).creatorID && contentPending == ((LibraryElement) obj).isContentPending()
+                    && contentRestricted == ((LibraryElement) obj).contentRestricted) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getTitle()).append(" [").append(getContentID()).append(",").append(getCreatorID()).append("]");
+        if(isContentPending()) {
+            sb.append(" - Content Pending Approval");
+        }
+        if(isContentRestricted()) {
+            sb.append(" - Content Marked As Restricted");
+        }
+        return sb.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getTitle(), contentID, creatorID, contentPending, contentRestricted);
     }
 }

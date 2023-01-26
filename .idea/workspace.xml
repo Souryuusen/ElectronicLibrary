@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected">
+    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-26&#10;- Modified LibraryElement&#10;- Added Basic Version Of Class Diagram">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/LibraryElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/LibraryElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/elibrary/book/BookElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/elibrary/book/LibraryElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/elibrary/book/BookElementTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/entities/data/LibraryElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/entities/data/LibraryElementTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/grzeg/OneDrive/Dokumenty/Eclipse Workspace/ElectronicLibrary",
+    "last_opened_file_path": "C:/Users/grzeg/OneDrive/Dokumenty/Eclipse Workspace/ElectronicLibrary/src/main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +88,17 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\grzeg\OneDrive\Dokumenty\Eclipse Workspace\ElectronicLibrary\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\grzeg\OneDrive\Dokumenty\Eclipse Workspace\ElectronicLibrary\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.elibrary.entities.data" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookElementTest (1)">
+  <component name="RunManager" selected="JUnit.LibraryElementTest">
     <configuration name="BookElementTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElectronicLibrary" />
       <extension name="coverage">
@@ -125,17 +129,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookElementTest.lambdaExpressions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryElementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElectronicLibrary" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.elibrary.entities.users.*" />
+          <option name="PATTERN" value="com.entities.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.elibrary.data" />
-      <option name="MAIN_CLASS_NAME" value="com.elibrary.data.BookElementTest" />
-      <option name="METHOD_NAME" value="lambdaExpressions" />
+      <option name="PACKAGE_NAME" value="com.entities.data" />
+      <option name="MAIN_CLASS_NAME" value="com.entities.data.LibraryElementTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryElementTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ElectronicLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.entities.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.entities.data" />
+      <option name="MAIN_CLASS_NAME" value="com.entities.data.LibraryElementTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,21 +168,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in ElectronicLibrary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ElectronicLibrary" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryElementTest" />
         <item itemvalue="JUnit.BookElementTest (1)" />
+        <item itemvalue="JUnit.LibraryElementTest.toStringTest" />
         <item itemvalue="JUnit.BookElementTest" />
         <item itemvalue="JUnit.book in ElectronicLibrary" />
-        <item itemvalue="JUnit.java in ElectronicLibrary" />
-        <item itemvalue="JUnit.BookElementTest.lambdaExpressions" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +192,7 @@
       <workItem from="1673773042487" duration="31000" />
       <workItem from="1674578582264" duration="2727000" />
       <workItem from="1674752128576" duration="183000" />
-      <workItem from="1674759319398" duration="1599000" />
+      <workItem from="1674759319398" duration="5614000" />
     </task>
     <task id="LOCAL-00001" summary="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class">
       <created>1673633241741</created>
@@ -218,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674581340101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2023-01-26&#10;- Modified LibraryElement&#10;- Added Basic Version Of Class Diagram">
+      <created>1674763025743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674763025743</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +261,8 @@
     <MESSAGE value="2023-01-14&#10;- Added new constructors to ApplicationUser" />
     <MESSAGE value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor" />
     <MESSAGE value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected" />
+    <MESSAGE value="2023-01-26&#10;- Modified LibraryElement&#10;- Added Basic Version Of Class Diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-01-26&#10;- Modified LibraryElement&#10;- Added Basic Version Of Class Diagram" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
