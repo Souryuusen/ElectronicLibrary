@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/states/ContentEditResults.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/users/ContentEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/entities/data/LibraryElementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/entities/users/ApplicationUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/entities/users/ContentEditTest.java" afterDir="false" />
+    <list default="true" id="c534aa54-1d0c-4d89-8500-2951697b9710" name="Changes" comment="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/BookElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/BookElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/elibrary/entities/data/BookElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/entities/data/BookElementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/elibrary/users/ApplicationUserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/LibraryElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elibrary/entities/data/LibraryElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/elibrary/book/BookElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/elibrary/book/LibraryElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/elibrary/book/BookElementTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,39 +66,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/grzeg/OneDrive/Dokumenty/Eclipse Workspace/ElectronicLibrary/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.49770114&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/grzeg/OneDrive/Dokumenty/Eclipse Workspace/ElectronicLibrary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.49770114",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.elibrary.entities.data" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookElementTest">
-    <configuration name="All in ElectronicLibrary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BookElementTest (1)">
+    <configuration name="BookElementTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ElectronicLibrary" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.entities.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.entities.data" />
+      <option name="MAIN_CLASS_NAME" value="com.entities.data.BookElementTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookElementTest (1)" />
         <item itemvalue="JUnit.BookElementTest" />
         <item itemvalue="JUnit.book in ElectronicLibrary" />
         <item itemvalue="JUnit.java in ElectronicLibrary" />
         <item itemvalue="JUnit.BookElementTest.lambdaExpressions" />
-        <item itemvalue="JUnit.All in ElectronicLibrary" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +179,9 @@
       <workItem from="1673633107768" duration="817000" />
       <workItem from="1673681754207" duration="4397000" />
       <workItem from="1673773042487" duration="31000" />
-      <workItem from="1674578582264" duration="2661000" />
+      <workItem from="1674578582264" duration="2727000" />
+      <workItem from="1674752128576" duration="183000" />
+      <workItem from="1674759319398" duration="1599000" />
     </task>
     <task id="LOCAL-00001" summary="2023-01-10&#10;- Created BookElement Class&#10;- Added Unit Tests For BookElement Class">
       <created>1673633241741</created>
@@ -206,11 +211,29 @@
       <option name="project" value="LOCAL" />
       <updated>1673698411307</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected">
+      <created>1674581340101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674581340101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -219,10 +242,16 @@
     <MESSAGE value="2023-01-14&#10;- Reorganization of packages&#10;- Added Constructors to AbstractUser&#10;- Expanded UserRoles to new role - &quot;NO_ROLE&quot;&#10;- Added Constructors to ApplicationUser (further work need)" />
     <MESSAGE value="2023-01-14&#10;- Added new constructors to ApplicationUser" />
     <MESSAGE value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor" />
+    <MESSAGE value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-01-24&#10;- Modified Test Case For ApplicationUserTest&#10;- Refactored Packages In Test Scope&#10;- Added ContentEditResults Enum&#10;- Added ContentEditor User Type&#10;- Created Test Class For ContentEditor&#10;- Fixed Error With BookElement clone() being protected" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ElectronicLibrary$BookElementTest__1_.ic" NAME="BookElementTest (1) Coverage Results" MODIFIED="1674752297023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.entities.data.*</FILTER>
+    </SUITE>
   </component>
 </project>
