@@ -2,28 +2,35 @@ package com.elibrary.entities.data;
 
 import java.io.Serializable;
 
-public class LibraryElement implements Serializable, Cloneable {
+public class LibraryElement extends AbstractElement implements Serializable, Cloneable {
 
-    private String title;
+
 
     protected LibraryElement() {
 
     }
 
     protected LibraryElement(LibraryElement element) {
-        this.title = element.getTitle();
+       setTitle(element.getTitle());
     }
 
     protected LibraryElement(String title) {
-        this.title = title;
+        setTitle(title);
     }
 
-    public String getTitle() {
-        return title;
+    @Override
+    public String convertToJSON() {
+        return null;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    @Override
+    public String convertToXML() {
+        return null;
+    }
+
+    @Override
+    public String convertToYAML() {
+        return null;
     }
 
     @Override

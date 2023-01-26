@@ -56,6 +56,21 @@ public class BookElement extends LibraryElement implements Serializable, Cloneab
     }
 
     @Override
+    public String convertToJSON() {
+        return null;
+    }
+
+    @Override
+    public String convertToXML() {
+        return null;
+    }
+
+    @Override
+    public String convertToYAML() {
+        return null;
+    }
+
+    @Override
     public String toString() {
         if(!author.equals("") && !getTitle().equals("") && !synopsis.equals("")) {
             return author + ", " + getTitle() + "\n" + synopsis;
