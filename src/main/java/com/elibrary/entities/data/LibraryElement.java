@@ -1,8 +1,7 @@
 package com.elibrary.entities.data;
 
-import com.google.common.base.Objects;
-
 import java.io.Serializable;
+import java.util.Objects;
 
 public class LibraryElement extends AbstractElement implements Serializable{
 
@@ -97,17 +96,16 @@ public class LibraryElement extends AbstractElement implements Serializable{
 
     @Override
     public boolean equals(Object obj) {
-        if(obj != null && obj instanceof LibraryElement) {
-            if(getTitle().equalsIgnoreCase(((LibraryElement) obj).getTitle()) && contentID == ((LibraryElement) obj).getContentID()
-                    && creatorID == ((LibraryElement) obj).creatorID && contentPending == ((LibraryElement) obj).isContentPending()
-                    && contentRestricted == ((LibraryElement) obj).contentRestricted) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
+        if(this == obj) {
+            return true;
+        }
+        if(obj == null || this.getClass() != obj.getClass()) {
             return false;
         }
+        LibraryElement e = (LibraryElement) obj;
+        return getTitle().equalsIgnoreCase(e.getTitle()) && contentID == e.getContentID()
+                && creatorID == e.getCreatorID() && contentPending == e.isContentPending()
+                && contentRestricted == e.contentRestricted;
     }
 
     @Override
@@ -125,6 +123,6 @@ public class LibraryElement extends AbstractElement implements Serializable{
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(getTitle(), contentID, creatorID, contentPending, contentRestricted);
+        return Objects.hash(getTitle(), contentID, creatorID, contentPending, contentRestricted);
     }
 }

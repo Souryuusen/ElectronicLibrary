@@ -5,46 +5,46 @@ import java.util.Objects;
 
 public class BookElement extends LibraryElement implements Serializable, Cloneable {
 
-    private String author;
-    private String synopsis;
+    private String bookAuthor;
+    private String description;
 
     private boolean partOfSeries;
 
     public BookElement() {
         super();
-        this.author = "";
-        this.synopsis = "";
+        this.bookAuthor = "";
+        this.description = "";
         this.partOfSeries = false;
     }
 
     public BookElement(BookElement element) {
         this.setTitle(element.getTitle());
-        this.author = element.getAuthor();
-        this.synopsis = element.getSynopsis();
+        this.bookAuthor = element.getBookAuthor();
+        this.description = element.getDescription();
         this.setPartOfSeries(element.isPartOfSeries());
     }
 
-    public BookElement(String author, String title, String synopsis, boolean partOfSeries) {
+    public BookElement(String bookAuthor, String title, String description, boolean partOfSeries) {
         super(title);
-        this.author = author;
-        this.synopsis = synopsis;
+        this.bookAuthor = bookAuthor;
+        this.description = description;
         this.partOfSeries = partOfSeries;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getBookAuthor() {
+        return bookAuthor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
 
-    public String getSynopsis() {
-        return synopsis;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSynopsis(String synopsis) {
-        this.synopsis = synopsis;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean isPartOfSeries() {
@@ -72,16 +72,11 @@ public class BookElement extends LibraryElement implements Serializable, Cloneab
 
     @Override
     public String toString() {
-        if(!author.equals("") && !getTitle().equals("") && !synopsis.equals("")) {
-            return author + ", " + getTitle() + "\n" + synopsis;
+        if(!bookAuthor.equals("") && !getTitle().equals("") && !description.equals("")) {
+            return bookAuthor + ", " + getTitle() + "\n" + description;
         } else {
             return "Brak danych książki.";
         }
-    }
-
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return (Object) new BookElement(this);
     }
 
     @Override
@@ -89,11 +84,12 @@ public class BookElement extends LibraryElement implements Serializable, Cloneab
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BookElement that = (BookElement) o;
-        return partOfSeries == that.partOfSeries && Objects.equals(author, that.author) && Objects.equals(synopsis, that.synopsis);
+        return partOfSeries == that.partOfSeries && Objects.equals(bookAuthor, that.bookAuthor) && Objects.equals(description, that.description)
+                && Objects.equals(getTitle(), that.getTitle()) && Objects.equals(getContentID(), that.getContentID());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(author, synopsis, partOfSeries);
+        return Objects.hash(bookAuthor, description, partOfSeries);
     }
 }
